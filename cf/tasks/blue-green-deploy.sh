@@ -43,11 +43,11 @@ apps_url=`cf curl $routes_url | jq -r '.resources[].entity | select(.host=="'"$C
 
 # Fetch the app names assigned to the hostname
 app_names=`(cf curl $apps_url | jq -r '.resources[].entity.name')`
-echo "app names: ${app_names}"
+
 for name in $app_names; do
     if [ "$name" != "$app_name" ]
     then
-      echo "Name: $name"
       cf delete $name -r
+      cf rename $app_name company
     fi
 done
