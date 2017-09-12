@@ -60,16 +60,15 @@ jobs:
   - put: version
     params: {file: version/number}
 
-# - name: deploy-dev
-#   plan:
-#   - aggregate:
-#     - get: artifact
-#       passed: [build]
-#     - get: app
-#     - get: version
-#       passed: [build]
-#     - get: pipelines
-
+#- name: deploy-dev
+#  plan:
+#  - aggregate:
+#    - get: artifact
+#      passed: [build]
+#    - get: app
+#    - get: version
+#      passed: [build]
+#    - get: pipelines
 
 - name: major
   serial_groups: [version]
