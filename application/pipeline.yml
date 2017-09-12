@@ -69,7 +69,6 @@ jobs:
     - get: app
     - get: version
       passed: [build]
-      trigger: true
     - get: pipelines
   - task: deploy
     file: ((deploy_dev_task))
