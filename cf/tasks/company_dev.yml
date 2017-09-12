@@ -1,5 +1,5 @@
 ---
-# this manifest deploys the rsoter application
+# this manifest deploys the company application
 applications:
   - name: company
     memory: 1G
