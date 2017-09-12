@@ -1,7 +1,7 @@
 build_task: pipelines/gradle/tasks/gradle-assemble.yml # don't change
 deploy_dev_task: pipelines/cf/tasks/blue-green-deploy.yml # don't change
 
-app_name: cloudserver
+app_name: bberg-cloud-server
 jar_name: bberg-cloud-server
 
 github_app_repo_uri: https://github.com/Valiken/bberg-cloud-server.git
@@ -16,7 +16,7 @@ version_bucket_region_name: us-west-2 # don't change
 version_key: bberg-cloudserver-version
 initial_version: 0.0.1
 
-artifact_regexp: bberg-cloudserver-(.*).jar # set to 'bberg-cloudserver-(.*).jar'.  ex: sgreenberg-cloudserver-(.*).jar
+artifact_regexp: bberg-cloud-server-(.*).jar # set to 'bberg-cloudserver-(.*).jar'.  ex: sgreenberg-cloudserver-(.*).jar
 artifact_bucket: rscale-training-bucket # don't change
 artifact_bucket_region_name: us-west-2 # don't change
 
