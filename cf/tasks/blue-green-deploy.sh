@@ -45,6 +45,6 @@ app_names=`(cf curl $apps_url | jq -r '.resources[].entity.name')`
 for name in $app_names; do
     if [ "$name" != "$app_name" ]
     then
-      cf delete $app_name -r
+      cf delete $name -r
     fi
 done

@@ -65,9 +65,11 @@ jobs:
   - aggregate:
     - get: artifact
       passed: [build]
+      trigger: true
     - get: app
     - get: version
       passed: [build]
+      trigger: true
     - get: pipelines
   - task: deploy
     file: ((deploy_dev_task))
@@ -78,6 +80,7 @@ jobs:
       CF_ORGANIZATION: ((cf_dev_organization))
       CF_SPACE: ((cf_dev_space))
       CF_DOMAIN: ((cf_dev_domain))
+      CF_HOSTNAME: ((cf_dev_hostname))
       CF_MANIFEST: ((cf_dev_manifest))
 
 - name: major
