@@ -25,4 +25,4 @@ cf_dev_organization: rscale-training-1
 cf_dev_space: brian.berg@cgi.com
 cf_dev_hostname: company-bberg
 cf_dev_domain: cfapps.io
-cf_dev_manifest: pipelines/cf/tasks/company_dev.yml
+cf_dev_manifest: company_dev.yml
