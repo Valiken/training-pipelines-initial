@@ -16,7 +16,7 @@ version_bucket_region_name: us-west-2 # don't change
 version_key: bberg-roster-version
 initial_version: 0.0.1
 
-artifact_regexp: bberg-company-(.*).jar # set to 'bberg-company-(.*).jar'.  ex: sgreenberg-company-(.*).jar
+artifact_regexp: bberg-roster-(.*).jar # set to 'bberg-company-(.*).jar'.  ex: sgreenberg-company-(.*).jar
 artifact_bucket: rscale-training-bucket # don't change
 artifact_bucket_region_name: us-west-2 # don't change
 
