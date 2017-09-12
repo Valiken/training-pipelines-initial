@@ -48,7 +48,7 @@ for name in $app_names; do
     then
       cf unmap-route $name $CF_DOMAIN --hostname $CF_HOSTNAME
       cf delete $name -f
-      cf rename $app_name company
+      cf rename $app_name $CF_APP_NAME
       cf unmap-route $app_name $CF_DOMAIN --hostname $app_name
     fi
 done
