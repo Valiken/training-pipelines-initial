@@ -17,7 +17,6 @@ cf push $app_name -f app/${CF_MANIFEST} -p artifact/*.* -n $green_app_route
 
 cf map-route $app_name $CF_DOMAIN --hostname $CF_HOSTNAME
 
-
 # Get the org's spaces url
 spaces_url=`cf curl /v2/organizations | jq -r '.resources[].entity | select(.name=="'"$CF_ORGANIZATION"'") | .spaces_url'`
 
@@ -47,7 +46,8 @@ app_names=`(cf curl $apps_url | jq -r '.resources[].entity.name')`
 for name in $app_names; do
     if [ "$name" != "$app_name" ]
     then
-      cf delete $name -r -f
+      cf unmap-route $name $CF_DOMAIN --hostname $CF_HOSTNAME
+      cf delete $name -f
       cf rename $app_name company
     fi
 done
