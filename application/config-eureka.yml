@@ -4,7 +4,7 @@ deploy_dev_task: pipelines/cf/tasks/blue-green-deploy.yml # don't change
 app_name: eureka
 jar_name: bberg-eureka
 
-github_app_repo_uri: https://github.com/Valiken/bberg-eureka.git
+github_app_repo_uri: https://github.com/Valiken/bberg.eureka.git
 github_app_repo_branch: master # don't change
 
 github_pipelines_repo_uri: https://github.com/Valiken/training-pipelines-initial.git
