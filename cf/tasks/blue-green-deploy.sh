@@ -51,5 +51,6 @@ for name in $app_names; do
       cf rename $app_name $CF_APP_NAME
       cf unmap-route $CF_APP_NAME $CF_DOMAIN --hostname $green_app_route
       cf delete-route $CF_DOMAIN --hostname $green_app_route -f
+      cf restart $CF_APP_NAME
     fi
 done
