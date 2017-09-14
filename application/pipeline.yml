@@ -83,6 +83,22 @@ jobs:
       CF_HOSTNAME: ((cf_dev_hostname))
       CF_MANIFEST: ((cf_dev_manifest))
 
+#- name: integration
+#  plan:
+#    - aggregate:
+#      - get: version
+#        passed: [deploy-dev]
+#      - get: app
+#      - get: artifact
+#        passed: [deploy-dev]
+#        trigger: true
+#      - get: pipelines
+#    - task: test
+#      file: ((integration_test_task))
+#      params:
+#          CF_HOSTNAME:
+#          CF_DOMAIN: 
+
 - name: major
   serial_groups: [version]
   plan:

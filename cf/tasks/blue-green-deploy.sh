@@ -40,8 +40,12 @@ echo "routes_url: shows the routes in the space: ${routes_url}"
 # get the apps on on the route in the domain
 apps_url=`cf curl $routes_url | jq -r '.resources[].entity | select(.host=="'"$CF_HOSTNAME"'") | select(.domain_guid=="'"$domain_guid"'") | .apps_url'`
 
+echo "apps_url: shows the apps on the route in the domain: ${apps_url}"
+
 # Fetch the app names assigned to the hostname
 app_names=`(cf curl $apps_url | jq -r '.resources[].entity.name')`
+
+echo "app_names: shows the app names assigned to the host name: ${app_names}"
 
 for name in $app_names; do
     if [ "$name" != "$app_name" ]

@@ -12,6 +12,7 @@ inputs:
 - name: version
 
 outputs:
-- name: 
+- name:
+
 run:
-  path: pipelines/cf/tasks/integration.sh
+  path: pipelines/integration/tasks/integration.sh

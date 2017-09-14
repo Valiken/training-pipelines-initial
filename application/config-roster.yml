@@ -1,5 +1,6 @@
 build_task: pipelines/gradle/tasks/gradle-assemble.yml # don't change
 deploy_dev_task: pipelines/cf/tasks/blue-green-deploy.yml # don't change
+#integration_test_task: pipelines/integration/tasks/integration.yml
 
 app_name: roster
 jar_name: bberg-roster
